@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style>
+		.wrap{
+			width:800px;
+			margin:30px auto 0;
+		}
+		.head,.con{
+			overflow:hidden;
+		}
+		.head span,.con span{
+			float:left;
+			width:198px;
+			height:40px;
+			text-align:center;
+			line-height:40px;
+			border:1px solid #000;
+		}
+	</style>
+	<script type="text/javascript" src="angular-1.2.20.min.js"></script>
+</head>
+<body>
+	<!-- <div ng-init="name='tony'">
+		<input type="text" ng-model="name">
+		<h1>{{name}}</h1>
+	</div> -->
+	<div class="wrap" ng-app="myApp" ng-controller="myCtrol">
+		<div class="head">
+			<span>姓名</span>
+			<span>性别</span>
+			<span>分数</span>
+			<span>年龄</span>
+		</div>
+		<div class="con" ng-repeat="x in student">
+			<span>{{x.name}}</span>
+			<span>{{x.sex}}</span>
+			<span>{{x.score}}</span>
+			<span>{{x.age}}</span>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var app=angular.module('myApp',[]);
+	app.controller('myCtrol',function  ($scope) {
+		$scope.student=[
+			{name:'张三',sex:'男',score:88,age:18},
+			{name:'李四',sex:'男',score:88,age:18},
+			{name:'王五',sex:'男',score:88,age:18},
+			{name:'杨六',sex:'男',score:88,age:18}
+		]
+	})
+</script>
+</html>

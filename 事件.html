@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<script type="text/javascript" src="angular-1.2.20.min.js"></script>
+</head>
+<body>
+	<div ng-controller="myCtrol">
+		<button ng-click="add()">点击</button>
+		<h1>{{count}}</h1>
+	</div>
+</body>
+<script type="text/javascript">
+	var app=angular.module('myApp',[]);
+	app.controller('myCtrol',function  ($scope) {
+		$scope.count=0;
+		$scope.add=function (){
+			$scope.count=$scope.count+1;
+		}
+	})
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<script type="text/javascript" src="angular-1.2.20.min.js"></script>
+</head>
+<body>
+	<div>hello,{{"欢迎来到angular世界！"}}</div>
+	<div ng-controller="firstCtrl">
+		<!-- <p>{{person.name+' '+person.age}}</p> -->
+		<p>{{name}}</p>
+		<p>{{age}}</p>
+	</div>
+	<p>{{name}}</p>
+	<p>{{age}}</p>
+</body>
+<script type="text/javascript">
+	function firstCtrl ($scope,$rootScope) {
+		// $scope.person={
+		// 	name:'xiaoming',
+		// 	age:22
+		// }
+		$rootScope.name="ahha";
+		$scope.age=19;
+	}
+</script>
+</html>

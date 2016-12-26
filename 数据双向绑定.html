@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<script type="text/javascript" src="angular-1.2.20.min.js"></script>
+</head>
+<body>
+	<div ng-controller="data">
+		<input type="text" name="" ng-model="txt">
+		<h2>{{txt}}</h2>
+	</div>
+</body>
+<script type="text/javascript">
+	function data ($scope) {
+		$scope.txt="请输入"
+	}
+</script>
+</html>

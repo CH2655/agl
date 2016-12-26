@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<script type="text/javascript" src="angular-1.2.20.min.js"></script>
+</head>
+<body>
+	<div my-hello></div>
+	<!-- <div class="my-hello"></div>
+	<my-hello></my-hello>	 -->
+</body>
+<script type="text/ng-template" id="abc">
+	<ul>
+		<li>111</li>
+		<li>222</li>
+		<li>333</li>
+	</ul>	
+</script>
+<script type="text/javascript">
+	// var app=angular.module('myApp',[]);
+	// app.directive('myHello',function  () {
+	// 	return {
+	// 		restrict:'EAC',
+	// 		replace:true,
+	// 		template:"<div><h3>hello world</h3></div>"
+	// 	}
+	// })
+
+	var app=angular.module('myApp',[]);
+	app.directive('myHello',function (){
+		return {
+			restrict:'EAC',
+			replace:true,
+			templateUrl:'abc'
+		}
+	})
+</script>
+</html>
